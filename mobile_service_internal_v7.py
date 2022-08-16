@@ -1,5 +1,5 @@
 #Ayah Kayed
-#Version 6 - Improving Error Handling & Creating "Show All Jobs" page
+#Version 7 - Programming Next and Previous Job buttons
 
 from tkinter import *
 from functools import partial

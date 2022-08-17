@@ -143,7 +143,7 @@ class Homepage:
 
             #adds $100 onto total cost if a wof and tune was required
             if wof_requirement == "yes":
-                total_job_cost=+100
+                total_job_cost+=100
 
             #saves relevant information and informs the user of their latest input
             job_information = f"This was job number {job_number}, for customer {customer_name}.\nYou charged ${total_job_cost} for this job"

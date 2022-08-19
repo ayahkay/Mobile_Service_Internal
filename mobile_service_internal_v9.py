@@ -217,7 +217,7 @@ and the job's charge will be automatically calculated for you.
             else:
                 job_information = f"Job number {job_number:.0f}, for the customer {customer_name}.\nYou charged a total of ${total_job_cost:.2f} for this job."
                 self.total_jobs_list.append(job_information)
-                self.program_explain_label.configure(text=job_information,
+                self.program_explain_label.configure(text="You have entered: " + job_information,
                                                      font="Arial 12 bold",
                                                      fg="green")
 

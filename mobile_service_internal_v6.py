@@ -168,7 +168,7 @@ class Homepage:
                 total_job_cost+=100
 
             #returns an error message if blank customer name was entered
-            if customer_name == "":
+            if customer_name.strip() == "":
                 self.program_explain_label.configure(text="Please enter a customer name!")
             #returns an error message if negative inputs were entered
             elif distance_travelled < 0 or minutes_spent < 0:

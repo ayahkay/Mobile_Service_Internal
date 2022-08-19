@@ -194,7 +194,7 @@ and the job's charge will be automatically calculated for you.
                 total_job_cost+=100
 
             #returns an error message if blank customer name was entered
-            if customer_name == "":
+            if customer_name.strip() == "":
                 self.program_explain_label.configure(text="Please enter a customer name!",
                                                      font="Arial 10 bold",
                                                      fg="red")

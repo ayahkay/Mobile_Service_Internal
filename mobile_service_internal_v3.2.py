@@ -1,5 +1,5 @@
 #Ayah Kayed
-#Version 3 - Add Error Handling
+#Version 3.2 - Store in List and Add Error Handling
 
 from tkinter import *
 from functools import partial

@@ -1,5 +1,5 @@
 #Ayah Kayed
-#Version 3.2 - Store in List and Add Error Handling
+#Version 3.1 - Store data in Multidimensional List
 
 from tkinter import *
 from functools import partial
@@ -12,7 +12,8 @@ class Homepage:
         background_color = "light gray"
 
         #creates list to hold total job information
-        self.total_jobs_list = []
+        self.total_jobs_list = [[] * 23]
+        self.i = -1
 
         #main framework
         self.homepage_frame = Frame(width = 1000,
@@ -119,7 +120,8 @@ class Homepage:
 
     #function to calculte the job's charge
     def calc_charge(self):
-        
+        self.i += 1
+        print(self.i)
         job_number = self.job_number_entry.get()
         customer_name = self.customer_name_entry.get()
         distance_travelled = self.distance_travelled_entry.get()
@@ -146,9 +148,11 @@ class Homepage:
                 total_job_cost+=100
 
             #saves relevant information and informs the user of their latest input
-            job_information = f"This was job number {job_number}, for customer {customer_name}.\nYou charged ${total_job_cost} for this job"
-            self.total_jobs_list.append(job_information)
-            self.program_explain_label.configure(text=job_information)
+            self.total_jobs_list[self.i][0] = job_number
+            self.total_jobs_list[self.i][1] = customer_name
+            self.total_jobs_list[self.i][2] = total_job_cost
+            self.program_explain_label.configure(text=f"This was job number {self.total_jobs_list[self.i][0]}, for customer {self.total_jobs_list[self.i][0]}.\nYou charged ${self.total_jobs_list[self.i][0]} for this job")
+            print(self.total_jobs_list)
 
         #returns an error message if an invalid input was entered
         except ValueError:

@@ -206,7 +206,7 @@ and the job's charge will be automatically calculated for you.
                                                      font="Arial 12 bold",
                                                      fg="red")
             elif distance_travelled == 0:
-                self.program_explain_label.configure(text="Please ensure your distance value is greater than zero!",
+                self.program_explain_label.configure(text="Please ensure your distance value is within your working boundaries!",
                                                      font="Arial 12 bold",
                                                      fg="red")
             elif distance_travelled > 100 or minutes_spent > 480:
